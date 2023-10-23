@@ -6,13 +6,19 @@ public class Recurso {
     private String perfilNecessario;
     private boolean ativo = true;
 
-    public Recurso() {
+    public Recurso nome(String nome) {
+        this.nome = nome;
+        return this;
     }
 
-    public Recurso(String nome, String perfilNecessario, boolean ativo) {
-        this.nome = nome;
+    public Recurso perfilNecessario(String perfilNecessario) {
         this.perfilNecessario = perfilNecessario;
+        return this;
+    }
+
+    public Recurso ativo(boolean ativo) {
         this.ativo = ativo;
+        return this;
     }
 
     public String getNome() {
@@ -39,7 +45,8 @@ public class Recurso {
         this.ativo = ativo;
     }
 
-    
-    
-
+    @Override
+    public String toString() {
+        return "Recurso [nome=" + nome + ", perfilNecessario=" + perfilNecessario + ", ativo=" + ativo + "]";
+    }
 }
